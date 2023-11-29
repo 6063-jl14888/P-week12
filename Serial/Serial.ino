@@ -18,7 +18,14 @@ void sendData() {
 
   Serial.println(resTxt);
 }
+function connectToserial{
+  if(!mSerial. opened()){
+    mSerial.open(9600);
 
+    readyToReceive = true;
+    connectButton.hide();
+  }
+}
 void setup() {
   Serial.begin(9600);
   while (!Serial) {}
